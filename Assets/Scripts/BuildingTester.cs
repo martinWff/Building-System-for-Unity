@@ -15,6 +15,7 @@ public class BuildingTester : MonoBehaviour
         Debug.Log(nameof(Light));
         FurnitureLoaderManager.Register<Light>("Light",new LightningFurnitureComponentBuilder());
         furnLoader.LoadFurniture("Door");
+        furnLoader.LoadFurniture("Table");
     }
 
     // Update is called once per frame

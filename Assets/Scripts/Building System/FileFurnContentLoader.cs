@@ -26,12 +26,21 @@ namespace BuildingSystem
 
         public override string GetProperties(string label)
         {
-            return File.ReadAllText(Path.Combine(Application.persistentDataPath,rootFolder,label, propertiesName));
+            return SafeReadAllText(label, propertiesName);
         }
 
         public override string GetScript(string label)
         {
-            return File.ReadAllText(Path.Combine(Application.persistentDataPath, rootFolder, label, scriptName));
+            return SafeReadAllText(label, scriptName);
+        }
+
+        private string SafeReadAllText(string label,string fileName)
+        {
+            string fpath = Path.Combine(Application.persistentDataPath, rootFolder, label, fileName);
+            if (!File.Exists(fpath))
+                return null;
+
+            return File.ReadAllText(fpath);
         }
     }
 }
