@@ -40,6 +40,8 @@ namespace BuildingSystem
         private void LoadProperties(string label,GameObject g)
         {
             string properties = contentLoader.GetProperties(label);
+            if (string.IsNullOrEmpty(properties))
+                return;
 
             List<FurnitureComponentData> list = Deserialize(properties);
             if (list != null && list.Count > 0)
