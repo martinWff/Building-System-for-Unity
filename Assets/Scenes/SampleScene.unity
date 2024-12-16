@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b651dc539fa19734e881f7f2e2b64a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptProcessor: {fileID: 0}
+  scriptProcessor: {fileID: 11400000, guid: 93860c6985305784686962c3df9c716a, type: 2}
   contentLoader: {fileID: 11400000, guid: 876a8d7031ef52944bed5db738311b22, type: 2}
   propertyDeserializer: {fileID: 11400000, guid: db6dda66801cb4942ba40e07aa1456c5, type: 2}
   headerDeserializer: {fileID: 11400000, guid: 0a20afd145a525c4db818dcb0aab857f, type: 2}

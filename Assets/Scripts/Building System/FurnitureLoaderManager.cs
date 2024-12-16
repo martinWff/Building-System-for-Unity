@@ -23,7 +23,7 @@ namespace BuildingSystem
         public GameObject LoadFurniture(string label)
         {
             GameObject g = new GameObject(label,typeof(GltfBoundsAsset),typeof(Furniture));
-            GltfAsset asset = g.GetComponent<GltfAsset>();
+            GltfBoundsAsset asset = g.GetComponent<GltfBoundsAsset>();
             asset.Url = contentLoader.GetModelUrl(label);
 
             LoadHeader(label, g);
