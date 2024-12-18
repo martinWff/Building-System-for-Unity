@@ -8,10 +8,4 @@ namespace ModelLoaderSystem
         public string componentType;
         public Dictionary<string, object> properties;
     }
-
-    public class ModelComponentBuildData
-    {
-        public Type componentType;
-        public Dictionary<string, object> properties;
-    }
 }

@@ -68,7 +68,7 @@ namespace ModelLoaderSystem
 
             if (data != null)
             {
-                BuildObject(data, g);
+                data.Build(g);
             }
 
             if (onGameObjectLoaded != null)
@@ -77,15 +77,6 @@ namespace ModelLoaderSystem
             }
 
             return g;
-        }
-
-
-        private void BuildObject(ObjectBuilderData bd,GameObject g)
-        {
-            for (int i = 0;i<bd.instructions.Count;i++)
-            {
-                bd.instructions[i].Step(g);
-            }
         }
 
         public static void Register(Type type,string codename,Type builder)
@@ -105,18 +96,6 @@ namespace ModelLoaderSystem
         {
             builderNames[codename] = type;
             builderTypes[type] = builder;
-        }
-
-        public class ObjectBuilderData
-        {
-            public readonly string label;
-            public readonly List<ObjectBuildingInstruction> instructions = new List<ObjectBuildingInstruction>();
-
-            internal ObjectBuilderData(string lbl)
-            {
-                label = lbl;
-            }
-
         }
     }
 }

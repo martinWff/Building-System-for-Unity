@@ -14,8 +14,8 @@ public class BuildingTester : MonoBehaviour
         ModelLoaderManager.Register<Light, LightningObjectComponentBuilder>("Light");
       //  furnLoader.LoadFurniture("Door");
        // furnLoader.LoadFurniture("Table");
-        ModelLoaderManager.ObjectBuilderData obd = furnLoader.LoadObjectData("Door");
-
+        ObjectBuilderData obd = furnLoader.LoadObjectData("Door");
+        
         Debug.Log(obd.label);
 
         furnLoader.LoadObject(obd);
