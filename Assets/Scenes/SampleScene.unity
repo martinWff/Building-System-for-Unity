@@ -318,8 +318,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996448783}
-  - component: {fileID: 1996448785}
-  - component: {fileID: 1996448784}
   - component: {fileID: 1996448786}
   - component: {fileID: 1996448787}
   m_Layer: 0
@@ -344,42 +342,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1996448784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996448782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e097a879aa94bf4299425cd4e48b390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 5, z: 5}
-  blacklist: 0
---- !u!114 &1996448785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996448782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d0487e2e4140f44a4495c162c8fa10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlaced:
-    m_PersistentCalls:
-      m_Calls: []
-  onRemoved:
-    m_PersistentCalls:
-      m_Calls: []
-  modifiers:
-  - {fileID: 1996448784}
 --- !u!114 &1996448786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,13 +351,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996448782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b651dc539fa19734e881f7f2e2b64a15, type: 3}
+  m_Script: {fileID: 11500000, guid: c05bae4bcaa3e644fa13e08ff026da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptProcessor: {fileID: 11400000, guid: 93860c6985305784686962c3df9c716a, type: 2}
-  contentLoader: {fileID: 11400000, guid: 876a8d7031ef52944bed5db738311b22, type: 2}
-  propertyDeserializer: {fileID: 11400000, guid: db6dda66801cb4942ba40e07aa1456c5, type: 2}
-  headerDeserializer: {fileID: 11400000, guid: 0a20afd145a525c4db818dcb0aab857f, type: 2}
+  modelLoader: {fileID: 11400000, guid: 3126bae3ef4c95346a1e87d804d3f018, type: 2}
+  processors:
+  - {fileID: 11400000, guid: 51c701c36517dab4abb81f992ef76542, type: 2}
+  onObjectLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  onGameObjectLoaded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1996448787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83647f02e4603044c8635b600a0d2f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1996448785}
   furnLoader: {fileID: 1996448786}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
