@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BuildingSystem;
+using ModelLoaderSystem;
 
 
 public class BuildingTester : MonoBehaviour
 {
-    public BuildingManager manager;
-    public FurnitureLoaderManager furnLoader;
+    public ModelLoaderManager furnLoader;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(nameof(Light));
-        FurnitureLoaderManager.Register<Light>("Light",new LightningFurnitureComponentBuilder());
-        furnLoader.LoadFurniture("Door");
-        furnLoader.LoadFurniture("Table");
+        ModelLoaderManager.Register<Light, LightningObjectComponentBuilder>("Light");
+      //  furnLoader.LoadFurniture("Door");
+       // furnLoader.LoadFurniture("Table");
+        ModelLoaderManager.ObjectBuilderData obd = furnLoader.LoadObjectData("Door");
+
+        Debug.Log(obd.label);
+
+        furnLoader.LoadObject(obd);
     }
 
     // Update is called once per frame
