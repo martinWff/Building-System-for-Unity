@@ -20,7 +20,6 @@ public class BuildingTester : MonoBehaviour
 
         furnLoader.LoadObject(obd);
 
-
         furnLoader.LoadObject("Table");
     }
 
