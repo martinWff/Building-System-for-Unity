@@ -28,7 +28,11 @@ namespace ModelLoaderSystem
             
             if (modelLoader != null)
             {
-                bd.instructions.Add(modelLoader.Process(this, label));
+                ObjectBuildingInstruction instruction = modelLoader.Process(this, label);
+                if (instruction != null)
+                {
+                    bd.instructions.Add(instruction);
+                }
             }
 
             for (int i = 0;i<processors.Count;i++)
@@ -36,7 +40,10 @@ namespace ModelLoaderSystem
                 ObjectContentProcessor proc = processors[i];
 
                 ObjectBuildingInstruction instruction = proc.Process(this,label);
-                bd.instructions.Add(instruction);
+                if (instruction != null)
+                {
+                    bd.instructions.Add(instruction);
+                }
 
             }
 
