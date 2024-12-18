@@ -19,6 +19,9 @@ public class BuildingTester : MonoBehaviour
         Debug.Log(obd.label);
 
         furnLoader.LoadObject(obd);
+
+
+        furnLoader.LoadObject("Table");
     }
 
     // Update is called once per frame

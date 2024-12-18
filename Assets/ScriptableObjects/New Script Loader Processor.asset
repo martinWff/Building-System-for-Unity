@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738e1acf895a02d4798241affb66e331, type: 3}
+  m_Name: New Script Loader Processor
+  m_EditorClassIdentifier: 
+  reader: {fileID: 11400000, guid: 604e031e8a4c3524cbb1b84b1fe99ad8, type: 2}
+  processor: {fileID: 11400000, guid: 93860c6985305784686962c3df9c716a, type: 2}

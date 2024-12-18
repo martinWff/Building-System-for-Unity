@@ -357,6 +357,7 @@ MonoBehaviour:
   modelLoader: {fileID: 11400000, guid: 3126bae3ef4c95346a1e87d804d3f018, type: 2}
   processors:
   - {fileID: 11400000, guid: 51c701c36517dab4abb81f992ef76542, type: 2}
+  - {fileID: 11400000, guid: 80a7c01ce8d70244ba28fe1ab35349ec, type: 2}
   onObjectLoaded:
     m_PersistentCalls:
       m_Calls: []
