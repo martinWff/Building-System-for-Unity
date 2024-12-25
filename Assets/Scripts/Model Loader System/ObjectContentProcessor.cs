@@ -6,6 +6,6 @@ namespace ModelLoaderSystem
 {
     public abstract class ObjectContentProcessor : ScriptableObject
     {
-        public abstract ObjectBuildingInstruction Process(ModelLoaderManager loader,string label);
+        public abstract ObjectBuildingInstruction Process(ModelLoaderManager loader, string category, string label);
     }
 }

@@ -8,9 +8,9 @@ namespace ModelLoaderSystem
     {
         public ReadContentProcessor reader;
 
-        public sealed override ObjectBuildingInstruction Process(ModelLoaderManager loader, string label)
+        public sealed override ObjectBuildingInstruction Process(ModelLoaderManager loader, string category, string label)
         {
-            string txt = reader.GetData(label);
+            string txt = reader.GetData(category,label);
             if (string.IsNullOrEmpty(txt))
                 return null;
             T value = Parse(txt);

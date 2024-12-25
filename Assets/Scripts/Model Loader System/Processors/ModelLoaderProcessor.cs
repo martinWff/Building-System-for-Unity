@@ -8,18 +8,17 @@ namespace ModelLoaderSystem
     [CreateAssetMenu(menuName = "Object Loader/Content Loaders/Model (File)")]
     public class ModelLoaderProcessor : ObjectContentProcessor
     {
-        public string rootFolder;
         public string modelName = "Model.gltf";
         public string protocol = "file://";
 
-        public override ObjectBuildingInstruction Process(ModelLoaderManager loader, string label)
+        public override ObjectBuildingInstruction Process(ModelLoaderManager loader, string category, string label)
         {
-            return new ModelLoadingInstruction(GetUrl(label));
+            return new ModelLoadingInstruction(GetUrl(category,label));
         }
 
-        public virtual string GetUrl(string label)
+        public virtual string GetUrl(string category, string label)
         {
-            return protocol + Path.Combine(Application.persistentDataPath, rootFolder,label, modelName);
+            return protocol + Path.Combine(Application.persistentDataPath, category,label, modelName);
         }
 
 

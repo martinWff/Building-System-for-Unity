@@ -6,12 +6,12 @@ namespace ModelLoaderSystem
 {
     public abstract class ReadContentProcessor : ObjectContentProcessor
     {
-        public sealed override ObjectBuildingInstruction Process(ModelLoaderManager loader, string label)
+        public sealed override ObjectBuildingInstruction Process(ModelLoaderManager loader, string category, string label)
         {
-            return new ReadContentObjectInstruction(GetData(label));
+            return new ReadContentObjectInstruction(GetData(category,label));
         }
 
-        public abstract string GetData(string label);
+        public abstract string GetData(string category, string label);
 
 
         public class ReadContentObjectInstruction : ObjectBuildingInstruction

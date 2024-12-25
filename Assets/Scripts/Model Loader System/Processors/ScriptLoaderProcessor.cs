@@ -10,10 +10,10 @@ namespace ModelLoaderSystem
         public ReadContentProcessor reader;
         public ModelScriptProcessor processor;
 
-        public override ObjectBuildingInstruction Process(ModelLoaderManager loader, string label)
+        public override ObjectBuildingInstruction Process(ModelLoaderManager loader, string category, string label)
         {
 
-            return new ScriptBuildingInstruction(processor,reader.GetData(label));
+            return new ScriptBuildingInstruction(processor,reader.GetData(category,label));
         }
 
         public class ScriptBuildingInstruction : ObjectBuildingInstruction

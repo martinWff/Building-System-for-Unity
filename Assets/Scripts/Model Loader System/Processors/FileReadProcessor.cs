@@ -8,18 +8,17 @@ namespace ModelLoaderSystem
     [CreateAssetMenu(menuName = "Object Loader/Readers/File")]
     public class FileReadProcessor : ReadContentProcessor
     {
-        public string rootFolder;
         public string fileName;
 
-        public override string GetData(string label)
+        public override string GetData(string category,string label)
         {
-            return SafeReadAllText(label,fileName);
+            return SafeReadAllText(category,label,fileName);
         }
 
 
-        private string SafeReadAllText(string label, string fileName)
+        private string SafeReadAllText(string category,string label, string fileName)
         {
-            string fpath = Path.Combine(Application.persistentDataPath, rootFolder, label, fileName);
+            string fpath = Path.Combine(Application.persistentDataPath, category, label, fileName);
             if (!File.Exists(fpath))
                 return null;
 

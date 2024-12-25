@@ -363,6 +363,7 @@ MonoBehaviour:
   onGameObjectLoaded:
     m_PersistentCalls:
       m_Calls: []
+  categoryName: Weapons
 --- !u!114 &1996448787
 MonoBehaviour:
   m_ObjectHideFlags: 0
